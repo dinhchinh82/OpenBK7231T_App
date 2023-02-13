@@ -251,7 +251,7 @@ void MQTT_PublishOnlyDeviceChannelsIfPossible()
 static struct mqtt_connect_client_info_t mqtt_client_info =
 {
   "test",
-  // do not fil those settings, they are overriden when read from memory
+  // do not fil those settings, they are overriden when read from memory thử comment by ChinhND
   "user", /* user */
   "pass", /* pass */
   100,  /* keep alive */

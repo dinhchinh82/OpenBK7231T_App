@@ -8,7 +8,7 @@ on:
       - '**'
 
 env:
-  GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+  GITHUB_TOKEN: ${{ secrets.GH_TOKEN }}
   APP_NAME: ${{ github.event.repository.name }}
 
 jobs:
@@ -38,7 +38,7 @@ jobs:
             @semantic-release/git
             conventional-changelog-conventionalcommits
         env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GITHUB_TOKEN: ${{ secrets.GH_TOKEN }}
       - name: Set outputs
         id: refs
         run: |
@@ -132,7 +132,7 @@ jobs:
             @semantic-release/git
             conventional-changelog-conventionalcommits
         env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GITHUB_TOKEN: ${{ secrets.GH_TOKEN }}
       - name: Echo Semantic Release Versions
         if: steps.semantic.outputs.new_release_published == 'true'
         run: |
